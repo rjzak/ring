@@ -229,13 +229,7 @@ mod sysrand_chunk {
     }
 }
 
-#[cfg(all(
-    feature = "wasm32_unknown_unknown_js",
-    target_arch = "wasm32",
-    target_vendor = "unknown",
-    target_os = "unknown",
-    target_env = "",
-))]
+#[cfg(target_arch = "wasm32")]
 mod sysrand_chunk {
     use crate::error;
 
